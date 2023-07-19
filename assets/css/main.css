@@ -1,0 +1,97 @@
+
+.intro-textbox {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro1 .intro-textbox .text {
+    font-size: 5vw;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.intro-scrollControl {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%);
+    transition: opacity .5s;
+}
+
+
+
+
+.showcase {
+    height: 300vh;
+}
+
+.showcase .sticky {
+    position: relative;
+    height: 400vh;
+}
+
+.sticky .showcase-bg {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sticky .showcase-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-box {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.showcase-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.showcase-text {
+    font-size: 5vw;
+    z-index: 100;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.text-box {
+    position: relative;
+    margin: 0 100px;
+    min-height: inherit;
+}
+
+.showcase2 {
+    position: relative;
+    padding: 218px 0 226px;
+    background-size: cover;
+    overflow: hidden;
+    /* background: url(../images/prove\ \(1\).jpg) no-repeat 50%; */
+}
