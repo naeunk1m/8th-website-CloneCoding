@@ -25,7 +25,18 @@
     <!-- 컨테이너 -->
     <div class="container">
         <section class="cont-sc intro1">
-            <div class="intro-bg"></div>
+            <div class="intro-bg">
+                <picture class="poster">
+                    <source srcset="./assets/images/intro-poster--pc.jpg" media="(min-width: 750px)">
+                    <img srcset="./assets/images/intro-poster--mo.jpg" alt="ko">
+                </picture>
+                <video loop="" playsinline="" muted="">
+                    <source src="./assets/assets/Archivo-VariableFont_Medium_C_PC.mp4" type="video/mp4"
+                        media="(min-width: 750px)">
+                    <source src="./assets/assets/Archivo-VariableFont_Medium_C_MO.mp4" type="video/mp4">
+                    <span class="blind"></span>
+                </video>
+            </div>
             <div class="intro-textbox">
                 <p class="text t1">DATA ID는 나만의<br>데이터 아이덴티티입니다.</p>
                 <p class="text t2">이용자 개인이 데이터 소유권을 갖고<br>언제 어디서든 나를 증명하는<br>데이터 패스포트이자</p>
@@ -44,68 +55,108 @@
             </div>
         </section>
 
-        <!--  -->
 
 
-
-
-        <section class="cont-sc showcase">
-            <div class="sticky">
-                <div class="showcase-bg">
+        <section class="sc-showcase">
+            <div class="bg-area slide">
+                <div class="img-box">
                     <img src="./assets/images/img-showcase01-pc.jpg" alt="">
                 </div>
-                <div class="showcase-desc">
-                    <div class="showcase txt1">기록하고</div>
-                    <div class="showcase txt2">증명하고</div>
-                    <div class="showcase txt3">성장하기</div>
+                <div class="text-box">
+                    <p class="showcase-text t1">기록하고</p>
+                    <p class="showcase-text t2">증명하고</p>
+                    <p class="showcase-text t3">성장하기</p>
                 </div>
-                <div class="showcase-bg">
+            </div>
+            <div class="bg-area slide">
+                <div class="img-box">
                     <img src="./assets/images/img-showcase02-pc.jpg" alt="">
                 </div>
-                <div class="showcase-bg">
+            </div>
+            <div class="bg-area">
+                <div class="img-box">
                     <img src="./assets/images/img-showcase03-pc.jpg" alt="">
                 </div>
-                <div class="showcase-desc">
-                    <div class="showcase-text">
+                <div class="text-box">
+                    <p class="showcase-text">
                         엔터프라이즈블록체인은 블록체인<br>
                         네트워크 DATA ID를 활용해 그 문제를<br>
                         해결하고 새로운 방식을 제안하고자 합니다.
-                    </div>
+                    </p>
                 </div>
             </div>
         </section>
 
-
-        <!--  -->
-
-
-
-        <section class="cont-sc challenge">
-            <!-- <div class="text-box">
-                <div class="challenge-title">긱 워커<br>개인사업자<br>크리에이터</div>
-                <div class="challenge-desc">파트타임 단기업무, 부업, 프리랜서 활동.<br>
-                    그 어떤 것도 상관없어요.<br>
-                    분산되어 있던 소득과 거래 이력부터 자격, 창작물 등의<br>
-                    재능 상세를 담은 포트폴리오까지.<br>
-                    나의 이력과 재능을 증명할 정보를 모두 담을 수 있어요.
+        <section class="sc-challenge">
+            <div class="text-area">
+                <div class="text-box">
+                    <div class="challenge-title">긱 워커<br>개인사업자<br>크리에이터</div>
+                    <div class="challenge-desc">파트타임 단기업무, 부업, 프리랜서 활동.<br>
+                        그 어떤 것도 상관없어요.<br>
+                        분산되어 있던 소득과 거래 이력부터 자격, 창작물 등의<br>
+                        재능 상세를 담은 포트폴리오까지.<br>
+                        나의 이력과 재능을 증명할 정보를 모두 담을 수 있어요.
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </section>
-        <section class="cont-sc showcase2">
-            <div class="showcase2-text1">가치를</div>
-            <div class="showcase2-text1">증명하고 싶다면</div>
-            <div class="showcase2-text1">누구든지.</div>
+        <section class="sc-showcase2">
+            <div class="showcase2-title">
+                <div class="showcase2-text1">가치를</div>
+                <div class="showcase2-text1">증명하고 싶다면</div>
+                <div class="showcase2-text1">누구든지.</div>
+            </div>
+            <div class="bg left"></div>
+            <div class="bg right"></div>
         </section>
-        <section class="cont-sc gallery"></section>
-        <section class="cont-sc possibility"></section>
-        <section class="cont-sc challenge2"></section>
-        <section class="cont-sc feature"></section>
-        <section class="cont-sc service"></section>
-        <section class="cont-sc challenge3"></section>
-        <section class="cont-sc showcase3"></section>
-        <section class="cont-sc slide"></section>
-        <section class="cont-sc creator"></section>
-        <section class="cont-sc ground"></section>
+
+
+
+        <section class="sc-gallery">
+            <div class="group-gallery">
+                <div class="gallery-area">
+                    <div class="gallery-title">
+                        <p class="gallery-text">
+                            당신의
+                            <br>
+                            다양한 재능을
+                            <br>
+                            <span>DATA ID</span>
+                            에
+                        </p>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="img-box">
+                            <img src="./assets/images/talent-01.jpg" alt="">
+                            <p class="img-desc">
+                                플라워 클래스를 운영하는 정호영 씨도
+                            </p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./assets/images/talent-02.jpg" alt="">
+                            <p class="img-desc">
+                                카페를 운영하는 김은혜 씨도
+                            </p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./assets/images/talent-03-m.jpg" alt="">
+                            <p class="img-desc">
+                                프리랜서 개발자 송보름 씨도
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sc-possibility"></section>
+        <section class="sc-challenge2"></section>
+        <section class="sc-feature"></section>
+        <section class="sc-service"></section>
+        <section class="sc-challenge3"></section>
+        <section class="sc-showcase3"></section>
+        <section class="sc-slide"></section>
+        <section class="sc-creator"></section>
+        <section class="sc-ground"></section>
         <div class="joinus"></div>
         <footer class="footer"></footer>
     </div>

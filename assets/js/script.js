@@ -12,24 +12,53 @@ ScrollTrigger.create({
     scrub: true,
     pin: true,
     anticipatePin: 1,
-    markers: true,
+    // markers: true,
 }); 
 
 
+// 이미지 슬라이드
+const panel = document.querySelector(".bg-area.slide")
+
+gsap.utils.toArray(".bg-area.slide").forEach((panel, i) => {
+    ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        
+    })
+})
+
+// 텍스트 애니메이션
+
+    const ani5 = gsap.timeline();
+    ani5.to(".sc-showcase .t1", { xPercent: 300 }, "text")
+        .to(".sc-showcase .t2", { xPercent: -300 }, "text")
+        .to(".sc-showcase .t3", { xPercent: 300 }, "text")
+
+    ScrollTrigger.create({
+        animation: ani5,
+        trigger: ".bg-area",
+        start: "top top",
+        end: "+=3000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        // markers: true,
+    }); 
+
+// 텍스트 애니메이션
+// 이미지 슬라이드
+
+gsap.to('.sc-showcase2 .bg',{
+    scrollTrigger:{
+        trigger:'.sc-showcase2',
+        start:"50% 50%",
+        end:"50% 50%",
+        markers:true,
+        scrub:0,
+    },
+    width:0,
+})
 
 
-const ani5 = gsap.timeline();
-ani5.to(".showcase .img1 .txt1", {xPercent: 300},"text")
-    .to(".showcase .img1 .txt2", {xPercent: 0},"text")
-    .to(".showcase .img1 .txt3", {xPercent: -300},"text")
-
-ScrollTrigger.create({
-    animation: ani5,
-    trigger: ".img1",
-    start:"top top",
-    end: "+=2000",
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    markers: true,
-}); 
