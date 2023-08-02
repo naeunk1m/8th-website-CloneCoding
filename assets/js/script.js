@@ -1,23 +1,12 @@
-const ani7 = gsap.timeline();
-ani7.fromTo(".intro-textbox .t1", {autoAlpha:0}, {autoAlpha:1, duration:1 })
-ani7.fromTo(".intro-textbox .t2", {autoAlpha:0}, {autoAlpha:1, duration:1 })
-ani7.fromTo(".intro-textbox .t3", {autoAlpha:0}, {autoAlpha:1, duration:1 })
-ani7.fromTo(".intro-textbox .t4", {autoAlpha:0}, {autoAlpha:1, duration:1 })
 
-    
-ScrollTrigger.create({
-    animation: ani7,
-    trigger: ".intro-textbox",
-    start:"top top",
-    end: "+=3000",
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    markers: true,
-    id:"text-trigger",
-}); 
-
-
+var allText = document.querySelectorAll('.text'); 
+window.addEventListener('scroll', function(){
+    var dis = window.pageYOffset / ((document.querySelector('.intro1').offsetHeight - this.window.innerHeight) / 4);
+    var gap = 1; 
+    allText.forEach(function(arr, index) {
+        arr.style = '--progress:' + (Math.max(0, dis - (index * gap))) + '';
+    })
+})
 
 
 // 이미지 슬라이드
@@ -36,9 +25,9 @@ gsap.utils.toArray(".bg-area.slide").forEach((panel, i) => {
 // 텍스트 애니메이션
 
     const ani5 = gsap.timeline();
-    ani5.to(".sc-showcase .t1", { xPercent: 300 }, "text")
-        .to(".sc-showcase .t2", { xPercent: -300 }, "text")
-        .to(".sc-showcase .t3", { xPercent: 300 }, "text")
+    ani5.to(".sc-showcase .t1", { xPercent: 600 }, "text")
+        .to(".sc-showcase .t2", { xPercent: 0 }, "text")
+        .to(".sc-showcase .t3", { xPercent: -600 }, "text")
 
     ScrollTrigger.create({
         animation: ani5,
@@ -52,19 +41,66 @@ gsap.utils.toArray(".bg-area.slide").forEach((panel, i) => {
     }); 
 
 // 텍스트 애니메이션
-// 이미지 슬라이드
 
-gsap.to('.sc-showcase2 .bg',{
-    scrollTrigger:{
-        trigger:'.sc-showcase2',
-        start:"50% 50%",
-        end:"50% 50%",
-        markers:true,
-        scrub:0,
-    },
-    width:0,
+// sc-showcase2
+
+gsap.to(".showcase2-text1.t1", {
+    x: -300, 
+    duration:1, 
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".sc-showcase2",
+        start: "top top",
+        end: "bottom",
+        scrub: true,
+        markers: true,
+        id: "textani"
+
+    }
 })
 
+gsap.to(".showcase2-text1.t3", {
+    x: 300, 
+    duration:1, 
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".sc-showcase2",
+        start: "top top",
+        end: "bottom",
+        scrub: true,
+        markers: true,
+        id: "textani",
+        debug: true,
+    }
+})
+
+gsap.to(".right", {
+    width: 300,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".sc-showcase2",
+        start: "top 50%",
+        end: "bottom ",
+        scrub: true,
+        markers: true,
+    }
+});
+
+gsap.to(".left", {
+    width: 300,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".sc-showcase2",
+        start: "top 50%",
+        end: "bottom ",
+        scrub: true,
+        markers: true,
+    }
+});
+
+// sc-showcase2
 
 // sc-possibility
 
