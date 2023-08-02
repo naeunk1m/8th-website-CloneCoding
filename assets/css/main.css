@@ -40,6 +40,7 @@
 }
 
 .intro-textbox {
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -49,15 +50,17 @@
 }
 
 .intro1 .intro-textbox .text {
-    font-size: 5vw;
+    opacity: 0;
+    font-size: 24px;
+    line-height: 1.67;
+    font-weight: 700;
     position: absolute; 
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     padding: 30px;
-    width: 100%;
-    text-align: center;
+    width: auto;
 }
 
 .intro-scrollControl {
@@ -97,13 +100,11 @@
             background-position: center;
 }
 .sc-showcase .text-box {
-    font-size: 5vw;
     z-index: 100;
     text-transform: uppercase;
     display: inline-block;
 }
 .sc-showcase .text-box .showcase-text {
-    color: #f00;
 }
 
 /* sc-challenge */

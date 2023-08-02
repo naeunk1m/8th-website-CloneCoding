@@ -1,19 +1,23 @@
 const ani7 = gsap.timeline();
-ani7.from(".intro1 .intro-textbox .t1", {autoAlpha:0, duration:1, y: 50}, "+=1")
-.from(".intro1 .intro-textbox .t2", {autoAlpha:0, duration:1, y: 50}, "+=1")
-.from(".intro1 .intro-textbox .t3", {autoAlpha:0, duration:1, y: 50}, "+=1")
-.from(".intro1 .intro-textbox .t4", {autoAlpha:0, duration:1, y: 50}, "+=1")
+ani7.fromTo(".intro-textbox .t1", {autoAlpha:0}, {autoAlpha:1, duration:1 })
+ani7.fromTo(".intro-textbox .t2", {autoAlpha:0}, {autoAlpha:1, duration:1 })
+ani7.fromTo(".intro-textbox .t3", {autoAlpha:0}, {autoAlpha:1, duration:1 })
+ani7.fromTo(".intro-textbox .t4", {autoAlpha:0}, {autoAlpha:1, duration:1 })
+
     
 ScrollTrigger.create({
     animation: ani7,
-    trigger: ".intro1 .intro-textbox",
+    trigger: ".intro-textbox",
     start:"top top",
-    end: "+=6000",
+    end: "+=3000",
     scrub: true,
     pin: true,
     anticipatePin: 1,
-    // markers: true,
+    markers: true,
+    id:"text-trigger",
 }); 
+
+
 
 
 // 이미지 슬라이드
