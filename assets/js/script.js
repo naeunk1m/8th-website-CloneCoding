@@ -105,13 +105,15 @@ gsap.to(".left", {
 // sc-possibility
 
 
-gsap.to('.poss-area',{
+gsap.to('.group-poss',{
     scrollTrigger:{
-        trigger:".sc-possibility",
-        start:"20% 50%",
-        end:"bottom",
+        trigger:"#horizontal",
+        start:"0% 0%",
+        end:"100% 100%",
         markers: true,
-        scrub:0,
+        id: "name",
+        scrub: true,
+        pin: true,
         invalidateOnRefresh: true
     },
     xPercent:-100,
@@ -119,6 +121,8 @@ gsap.to('.poss-area',{
         return window.innerWidth;
     }
 })
+
+
 
 // sc-possibility
 
