@@ -53,7 +53,7 @@ gsap.to(".showcase2-text1.t1", {
         start: "top top",
         end: "bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
         id: "textani"
 
     }
@@ -68,7 +68,7 @@ gsap.to(".showcase2-text1.t3", {
         start: "top top",
         end: "bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
         id: "textani",
         debug: true,
     }
@@ -83,7 +83,7 @@ gsap.to(".right", {
         start: "top 50%",
         end: "bottom ",
         scrub: true,
-        markers: true,
+        // markers: true,
     }
 });
 
@@ -96,7 +96,7 @@ gsap.to(".left", {
         start: "top 50%",
         end: "bottom ",
         scrub: true,
-        markers: true,
+        // markers: true,
     }
 });
 
@@ -104,27 +104,21 @@ gsap.to(".left", {
 
 // sc-possibility
 
-function horizontalScroll() {
-    const sections = gsap.utils.toArray(".scroll");
-    const scrollDistance = window.innerWidth;
 
-    gsap.to(sections, {
-        x:() => -ScrollTrigger.progress * scrollDistance,
-        ease: "none", 
-        scrollTrigger: {
-            trigger: ".sc-showcase2",
-            start: "top top",
-            end: "bottom", 
-            scrub: true, 
-            markers: true,
-        }
-    })
-}
-
-horizontalScroll();
-
-window.addEventListener("resize", horizontalScroll);
-
+gsap.to('.poss-area',{
+    scrollTrigger:{
+        trigger:".sc-possibility",
+        start:"20% 50%",
+        end:"bottom",
+        markers: true,
+        scrub:0,
+        invalidateOnRefresh: true
+    },
+    xPercent:-100,
+    x:function(){
+        return window.innerWidth;
+    }
+})
 
 // sc-possibility
 

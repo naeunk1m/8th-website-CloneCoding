@@ -312,17 +312,22 @@
 
 #horizontal {
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
     overflow-x: hidden;
 }
 
 .sc-possibility {
-    overflow: hidden;
-}
-.sc-possibility .group-poss {
     position: relative;
-    margin: 0 100px;
+    margin:100px;
+    height: 100vh;
+}
+
+.sc-possibility .group-poss {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
 }
 
 .sc-possibility .poss-area {
