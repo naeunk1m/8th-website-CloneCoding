@@ -1,3 +1,217 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+}
+
 body {
-    background: url(../images/Archivo-VariableFont_Medium_C_PC.mp4);
+    min-width: 1300px;
+    background: #fff;
+    color: #000;
+    transition: all 0.4s;
+}
+
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+.bg-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.text-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* sc-txt1 */
+
+.sc-txt1 .text-area {
+    padding: 0 100px;
+}
+.sc-txt1 .title {
+    align-self: start;
+    width: 50%;
+    font-size: 72px;
+    line-height: 90px;
+    font-weight: bold;
+    word-break: keep-all;
+}
+.sc-txt1 .desc {
+    align-self: end;
+    width: 50%;
+    padding-left: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    word-break: keep-all;
+}
+
+/* sc-txt1 */
+
+/* sc-txt2 */
+
+.sc-txt2 {
+    position: relative;
+    height: 75vh;
+}
+.sc-txt2 .bg-area {
+    height: 100%;
+}
+
+.sc-txt2 .bg-area .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 150px;
+    background: #fff;
+}
+.sc-txt2 .bg-area .left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 150px;
+    background: #fff;
+}
+
+.sc-txt2 .text-area {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    font-size: 73px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #fff;
+}
+.sc-txt2 .text-area span {
+    display: block;
+}
+
+/* sc-txt2 */
+
+.sc-card .group-hori{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+    padding-left: 100px;
+}
+.sc-card .title-area{
+    font-size: 73px;
+    font-weight: bold;
+    line-height: 90px;
+    margin-right: 120px;
+}
+.sc-card .desc-area{
+    padding-left: 170px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.sc-card .card-item{ 
+    color: #fff;
+    border: 0;
+}
+.sc-card .card-item .middle-area{
+    margin-bottom:auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+
+.card-list{
+    display: flex;
+}
+.card-list li{
+    width: 400px;
+    height: 540px;
+    margin-left: 40px;
+    padding: 40px 35px;
+    border-radius: 20px;
+    background: #000;
+}
+.card-item{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #fff;
+}
+.card-item .bg{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.card-item .bg.blur{
+    transform: scale(1.2);
+    filter:blur(40px);
+}
+.card-item .top-area{
+    position: relative;
+    height: 100px;
+}
+.card-item .top-area .title{
+    font-size: 50px;
+    font-weight: 600;
+}
+.card-item .top-area .right{
+    position: absolute;
+    top: 0;right: 0;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.card-item .middle-area .code{
+    width: 280px;
+}
+.card-item .bottom-area{
+    position: relative;
+}
+.card-item .bottom-area .info{
+    font-size: 24px;
+    font-weight: bold;
+}
+.card-item .bottom-area .ic-contract{
+    position: absolute;
+    bottom: 0;right: 0;
+    width: 40px;
+}
+.card-item .bottom-area .color{
+    position: absolute;
+    bottom: 0;left: 0;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.card-item .bottom-area .user-id{
+    position: absolute;
+    bottom: 10px; left: 45px;
+    font-weight: bold;
 }

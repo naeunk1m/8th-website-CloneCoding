@@ -1,2 +1,140 @@
 @import './reset.css';
 @import './common.css';
+
+/* header */
+
+.header {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    min-width: 600px;
+    opacity: 0;
+    transition: all 0.3s;
+    padding: 17px 100px;
+}
+
+.header.fixed {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.header .logo a {
+    display: block;
+    width: 100px;
+}
+
+/* nav-right */
+
+body .logo path {
+    fill: #000;
+    transition: 0.4s;
+}
+
+body .lang-btn path {
+    stroke: #000;
+    transition: 0.4s;
+}
+
+body.dark .logo path {
+    fill: #fff;
+    transition: 0.4s;
+}
+body.dark .lang-btn path {
+    stroke: #fff;
+    transition: 0.4s;
+}
+
+.header .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 7px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.header .language {
+    margin-top: -5px;
+}
+.header .lang-btn {
+    display: flex;
+    gap: 5px;
+    line-height: 15px;
+    align-items: end;
+}
+.header .language .lang-item {
+    display: none;
+}
+
+/* nav-right */
+
+
+
+/* header */
+
+
+
+/* footer */
+
+.footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 55px 100px;
+    background: #000;
+    color: #fff;
+}
+
+.footer .logo-area h2{
+    width: 193px;
+    height: 42px;
+    background: url(../images/ft-logo-hori.png) no-repeat center / 193px auto;
+}
+
+.footer .addr-area{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+/* footer */
+
+/* topbtn */
+
+main{ position: relative; }
+
+#topBtn{
+    opacity:0;
+    transition:all 0.3s
+}
+#topBtn.on{
+    opacity:1;
+}
+#topBtn.on2{
+    opacity: 1;
+}
+#topBtn a{
+    position: fixed;
+    bottom: 40px; right: 100px;
+    width: 50px;
+    height: 50px;
+    background: #000 url(../images/top-btn.svg) no-repeat center;
+}
+#topBtn .fixed{
+    position: absolute;
+    right: 100px; bottom:100px;
+}
+#topBtn.hide{
+    opacity: 0;
+}
+
+
+/* topbtn */
