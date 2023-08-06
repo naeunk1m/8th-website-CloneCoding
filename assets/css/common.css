@@ -18,6 +18,26 @@ body.dark {
     color: #fff;
 }
 
+body .logo path {
+    fill: #000;
+    transition: 0.4s;
+}
+
+body .lang-btn path {
+    stroke: #000;
+    transition: 0.4s;
+}
+
+body.dark .logo path {
+    fill: #fff;
+    transition: 0.4s;
+}
+body.dark .lang-btn path {
+    stroke: #fff;
+    transition: 0.4s;
+}
+
+
 .bg-area {
     position: absolute;
     top: 0;
